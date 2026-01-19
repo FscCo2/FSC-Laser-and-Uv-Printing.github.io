@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FscCo2 Laser Cutting & UV Printing</title>
+  <meta name="description" content="FscCo2 — Professional CO2 laser cutting, laser engraving, and UV printing services for acrylic, wood, metal and promotional items. Fast turnaround and custom orders." />
+  <link rel="canonical" href="https://example.com/" />
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FscCo2 Laser Cutting & UV Printing" />
+  <meta property="og:description" content="Professional CO2 laser cutting, engraving and UV printing. High quality for businesses, designers, and personal projects." />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://example.com/og-image.jpg" />
+  <!-- Replace with your favicon -->
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="theme-color" content="#1f3c4d" />
+  <style>
+    :root{
+      --bg:#f4f4f4;
+      --brand:#1f3c4d;
+      --accent:#00c6ff;
+      --nav:#111;
+      --card:#ffffff;
+      --text:#222;
+      --maxw:1000px;
+      --radius:8px;
+      --gap:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body {
+      margin:0;
+      font-family: system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    a{color:inherit}
+    /* Skip link for keyboard users */
+    .skip-link{
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      z-index: 100;
+    }
+    .skip-link:focus{
+      left: 10px;
+      top: 10px;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      background:#000;
+      color:#fff;
+      border-radius:4px;
+      text-decoration:none;
+    }
+
+    header{
+      background:linear-gradient(180deg,var(--brand), #274655);
+      color:#fff;
+      padding:16px 16px 20px;
+      text-align:center;
+    }
+    .header-top {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    header h1{margin:6px 0 0;font-size:clamp(1.4rem,2.4vw,2.2rem)}
+    header p{margin:6px 0 0;font-size:1rem;opacity:0.95}
+    .header-phone{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      background:rgba(255,255,255,0.06);
+      padding:6px 10px;
+      border-radius:20px;
+      font-weight:700;
+    }
+    .header-phone a{color:#fff; text-decoration:none}
+    .call-badge{
+      display:inline-block;
+      background:rgba(0,198,255,0.12);
+      color:#00c6ff;
+      padding:6px 10px;
+      border-radius:16px;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    nav{
+      background:var(--nav);
+      padding:10px 12px;
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      position:sticky;
+      top:0;
+      z-index:20;
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 10px;
+      border-radius:6px;
+      transition:background .15s, color .12s;
+    }
+    nav a:hover, nav a:focus{background:rgba(255,255,255,0.06); color:var(--accent)}
+    /* Main content */
+    main{
+      max-width:var(--maxw);
+      margin:28px auto;
+      padding:0 16px 48px;
+    }
+    h2{
+      text-align:center;
+      color:var(--brand);
+      margin-bottom:18px;
+      font-size:1.4rem;
+    }
+    .box{
+      background:var(--card);
+      padding:20px;
+      border-radius:var(--radius);
+      margin-bottom:var(--gap);
+      box-shadow:0 3px 8px rgba(20,20,20,0.06);
+    }
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;
+    }
+    .services .box h3{margin:0 0 8px;font-size:1.05rem;color:var(--brand)}
+    /* Contact column layout */
+    .contact-grid{
+      display:grid;
+      gap:18px;
+      grid-template-columns:1fr;
+    }
+    @media(min-width:860px){
+      .contact-grid{grid-template-columns:1fr 360px}
+    }
+
+    /* Form */
+    form{display:flex;flex-direction:column;gap:10px}
+    label{font-size:0.92rem}
+    input[type="text"], input[type="email"], textarea{
+      width:100%;
+      padding:10px 12px;
+      border:1px solid #d7d7d7;
+      border-radius:6px;
+      font-size:0.95rem;
+      background:#fff;
+      color:var(--text);
+    }
+    textarea{min-height:120px;resize:vertical}
+    button.call-to-action{
+      display:inline-block;
+      background:var(--brand);
+      color:#fff;
+      border:none;
+      padding:10px 14px;
+      border-radius:6px;
+      font-weight:700;
+      cursor:pointer;
+    }
+    button.call-to-action:hover, button.call-to-action:focus{background:#173341; outline:none}
+    /* Phone/address box */
+    .meta p{margin:6px 0}
+    .meta a{color:var(--brand); font-weight:600; text-decoration:none}
+    /* Footer */
+    footer{
+      background:var(--nav);
+      color:#fff;
+      text-align:center;
+      padding:16px;
+      margin-top:24px;
+      font-size:0.95rem;
+    }
+    /* Focus styles */
+    :focus{outline:3px solid rgba(0,198,255,0.15); outline-offset:2px}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header role="banner">
+    <div class="header-top" aria-hidden="false">
+      <div>
+        <h1>FscCo2 Laser Cutting & UV Printing</h1>
+        <p>Professional Laser Cutting, Engraving & UV Printing Services</p>
+      </div>
+      <!-- Visible phone number for quick access -->
+      <div class="header-phone" aria-label="Call us">
+        <span class="call-badge">Call</span>
+        <a href="tel:+923406361290" aria-label="Call FscCo2 at +92 340 6361290">0340-6361290</a>
+      </div>
+    </div>
+  </header>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main id="main" role="main">
+    <section id="services" aria-labelledby="services-heading">
+      <h2 id="services-heading">Our Services</h2>
+      <div class="services" role="list">
+        <article class="box" role="listitem" aria-label="CO2 Laser Cutting">
+          <h3>CO2 Laser Cutting</h3>
+          <p>Accurate laser cutting for acrylic, wood, MDF, leather, and plastic. Ideal for signage, prototypes and custom parts.</p>
+        </article>
+        <article class="box" role="listitem" aria-label="Laser Engraving">
+          <h3>Laser Engraving</h3>
+          <p>Custom engraving for logos, signs, gifts, and branding materials—great for detailed personalization on many substrates.</p>
+        </article>
+        <article class="box" role="listitem" aria-label="UV Printing">
+          <h3>UV Printing</h3>
+          <p>High-quality UV printing on glass, metal, wood, and promotional items. Durable, vibrant prints for small and large runs.</p>
+        </article>
+        <article class="box" role="listitem" aria-label="Custom Orders">
+          <h3>Custom Orders</h3>
+          <p>Special designs and bulk orders for businesses and individuals. Prototype to production — we can scale to your needs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Us</h2>
+      <div class="box">
+        <p>
+          FscCo2 provides reliable and precise laser cutting and printing solutions. We focus on quality work, fast delivery, and customer satisfaction.
+          Our services suit businesses, designers, and personal projects. We work with local and remote clients.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="box" aria-labelledby="contact-form-heading">
+          <h3 id="contact-form-heading">Get a Quote</h3>
+          <!--
+            Replace the action URL below with your real form endpoint.
+            Example: If you use Formspree, replace with https://formspree.io/f/{your-id}
+            Or implement a server-side handler to accept POST requests.
+          -->
+          <form action="https://formspree.io/f/your-form-id" method="POST" aria-label="Contact form">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your full name" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="text" placeholder="0340-6361290" />
+
+            <label for="message">Message / Project details</label>
+            <textarea id="message" name="message" placeholder="Tell us about materials, sizes, quantities, and deadlines" required></textarea>
+
+            <!-- Optional: include a hidden field to identify the page -->
+            <input type="hidden" name="_subject" value="New quote request from website" />
+
+            <button class="call-to-action" type="submit">Send Request</button>
+          </form>
+        </div>
+
+        <aside class="box meta" aria-labelledby="contact-info-heading">
+          <h3 id="contact-info-heading">Contact Information</h3>
+          <p><strong>Phone:</strong> <a href="tel:+923406361290">0340-6361290</a></p>
+          <p><strong>Email:</strong> <a href="mailto:haseebshoaib724@gmail.com">haseebshoaib724@gmail.com</a></p>
+          <p><strong>Location:</strong> Abbot Road, Moen Center — Fsc Co2 Laser Cutting & UV Printing</p>
+          <p><strong>Hours:</strong> Monday–Saturday 10:00–22:00</p>
+
+          <!-- Optional embedded map (replace src with your Google Maps embed if desired)
+               Note: consider lazy-loading or a static image to reduce third-party requests. -->
+          <div style="margin-top:14px">
+            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026 FscCo2 Laser Cutting & UV Printing — All rights reserved. Phone: <a href="tel:+923406361290" style="color:inherit; text-decoration:underline;">0340-6361290</a> • Email: <a href="mailto:haseebshoaib724@gmail.com" style="color:inherit; text-decoration:underline;">haseebshoaib724@gmail.com</a></p>
+  </footer>
+
+  <!-- Structured data for LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FscCo2 Laser Cutting & UV Printing",
+    "telephone": "+92-340-6361290",
+    "email": "haseebshoaib724@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Abbot Road, Moen Center",
+      "addressLocality": "City",
+      "addressRegion": "Region",
+      "postalCode": "00000",
+      "addressCountry": "PK"
+    },
+    "openingHours": "Mo-Sa 10:00-22:00",
+    "url": "https://example.com/",
+    "sameAs": [
+      "https://www.facebook.com/your-page",
+      "https://www.instagram.com/your-page"
+    ]
+  }
+  </script>
+</body>
+</html>
